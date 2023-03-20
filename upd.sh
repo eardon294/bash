@@ -5,16 +5,16 @@
 #Recommende Usage#
 #It is recommended to create an Alias for this command and store it in your
 #.bashrc configurations, so that this runs automatically when typing upd, for example.
-echo "updating repositories and upgrading programs"
-sleep 3
-echo "you may need to enter your credentials"
-sleep 3
-echo "----------------------------" >> ~/package_install_results.log
-date >> ~/package_install_results.log
-echo "----------------------------" >> ~/package_install_results.log
-sudo apt update -y  >> ~/package_install_results.log
-sudo apt upgrade -y >> ~/package_install_results.log
-
-echo "----------------------------" >> ~/package_install_results.log
-
-echo "-------> Your system is up-to-date"
+notify-send "updating repositories and upgrading programs"
+sleep 2
+notify-send "you may need to enter your credentials"
+sleep 2
+echo "----------------------------" >> ~/myrepo/package_install_results.log
+date >> ~/myrepo/package_install_results.log
+echo "----------------------------" >> ~/myrepo/package_install_results.log
+sudo apt update -y  >> ~/myrepo/package_install_results.log
+sudo apt upgrade -y >> ~/myrepo/package_install_results.log
+echo "----------------------------" >> ~/myrepo/package_install_results.log
+notify-send "Your system is up-to-date"
+sleep 2
+notify-send "Review installation logs ~/myrepo/package_install_results.log"
